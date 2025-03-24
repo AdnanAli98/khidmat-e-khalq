@@ -1,0 +1,109 @@
+$primary-color: #00a859;
+$black: #333;
+$white: #fff;
+
+.header {
+  width: 100%;
+  background: $white;
+  padding: 15px 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  .container {
+    max-width: 1544px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .menu li {
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .desktopButton {
+    display: block;
+  }
+
+  @media (max-width: 1250px) {
+    .container {
+      height: 70px;
+    }
+
+    .menu,
+    .desktopButton {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
+
+/* Fix Mobile Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background: $white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1000;
+}
+
+.drawer.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 28px;
+  color: $black;
+  z-index: 1100;
+}
+
+.drawer .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 60px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.drawer .button {
+  display: block;
+  margin-top: 20px;
+  padding-left: 20px;
+}

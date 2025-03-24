@@ -1,0 +1,56 @@
+.aboutSection {
+    padding: 60px 10px;
+    text-align: center;
+    background-color: #F7F7F7;
+  
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .heading {
+        font-size: 44px;
+        font-weight: 600;
+        font-weight: bold;
+        margin-bottom: 10px;
+        
+        @media screen and (max-width: 620px) {
+          font-size: 25px;
+        }
+      }
+    .description {
+        font-size: 18px;
+        color: #454545;
+        max-width: 992px;
+        margin: 0 auto 40px;
+        line-height: 28px;
+      }
+    .imageWrapper {
+        display: flex;  
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        .abtImage {
+            width: 390px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+
+            @media screen and (max-width: 1280px) {
+              width: 270px;
+              height: 250px;
+              
+            }
+            @media screen and (max-width: 620px) {
+              width: 100%;
+              height: 300px;
+              object-fit: cover;
+              
+            }
+        }
+      }
+    .buttonWrapper {
+        margin-top: 40px;
+    }  
+}

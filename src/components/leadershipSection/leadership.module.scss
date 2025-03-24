@@ -1,0 +1,88 @@
+.leadershipSection {
+  padding: 60px 10px;
+  text-align: center;
+  background-color: #fff;
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .heading {
+    font-size: 44px;
+    font-weight: 600;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 620px) {
+      font-size: 25px;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    color: #454545;
+    max-width: 767px;
+    margin: 0 auto 40px;
+    line-height: 28px;
+  }
+
+  .image {
+    border: 2px solid transparent;
+    border-radius: 20px;
+  }
+  .leadershipGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+
+    @media screen and (max-width: 620px) {
+      gap: 15px;        
+    }
+
+    .Item {
+      width: 240px; 
+      transition: all 0.3s ease-in-out;
+
+      @media screen and (max-width: 620px) {
+        width: 170px;        
+      }
+
+      .image {
+        transition: border 0.3s ease-in-out;
+      }
+
+      .leadershipTitle {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        transition: color 0.3s ease-in-out;
+      }
+
+      &:hover {
+        .image {
+          border: 2px solid #b89a5c;
+        }
+        .leadershipTitle {
+          color: #b89a5c;
+        }
+      }
+    }
+  }
+
+  .leadershipTitle {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .leadershipDescription {
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .buttonWrapper {
+    margin-top: 40px;
+  }
+}
