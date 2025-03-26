@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import Menu from "./Menu";
 import Button from "./Button";
-import styles from "../headerSection/header.module.scss";
+import styles from "./header.module.scss";
 import { FiMenu, FiX } from "react-icons/fi"; 
 
 const Header = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./goalsgrid.module.scss";
-import Button from "../headerSection/Button"; 
+import Button from "../../app/globals/headerSection/Button";
 
 const GoalsGrid = ({ gridData }) => {
   return (

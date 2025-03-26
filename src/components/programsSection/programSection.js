@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./program.module.scss";
 import Link from "next/link";
-import Button from "../headerSection/Button"; 
+import Button from "../../app/globals/headerSection/Button";
 
 const ProgramSection = ({ programs = [] }) => {
   return (

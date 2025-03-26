@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./about.module.scss";
-import Button from "../headerSection/Button"; 
+import Button from "../../app/globals/headerSection/Button";
 
 const AboutSection = () => {
   return (
@@ -17,17 +17,17 @@ const AboutSection = () => {
         </p>
         <div className={styles.imageWrapper}>
           <img
-            src="/about1.png"
+            src="/images/about1.png"
             alt=""
             className={styles.abtImage}
           />  
           <img
-            src="/about2.png"
+            src="/images/about2.png"
             alt=""
             className={styles.abtImage}
           />  
           <img
-            src="/about3.png"
+            src="/images/about3.png"
             alt=""
             className={styles.abtImage}
           />  

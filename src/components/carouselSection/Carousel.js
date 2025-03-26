@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import styles from "./Carousel.module.scss";
-import Button from "../headerSection/Button";
+import Button from "../../app/globals/headerSection/Button";
 
 const cards = [
   { image: "/img.png", name: "Medical Camps" },

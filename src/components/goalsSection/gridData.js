@@ -7,8 +7,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal1.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal1.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 2,
@@ -18,8 +18,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal2.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal2.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal3.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal3.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 4,
@@ -40,8 +40,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal4.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal4.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 5,
@@ -51,8 +51,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal5.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal5.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 6,
@@ -62,8 +62,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal6.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal6.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 7,
@@ -73,8 +73,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal7.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal7.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
     {
       id: 8,
@@ -84,8 +84,8 @@ const gridData = [
       events: "137",
       publications: "50",
       applications: "1464",
-      image: "/goal8.png",
-      icon: "/E_SDG_PRINT-02.png",
+      image: "/images/goal8.png",
+      icon: "/images/E_SDG_PRINT-02.png",
     },
   ];
   

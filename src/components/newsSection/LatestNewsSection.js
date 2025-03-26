@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./latestNews.module.scss";
-import Button from "../headerSection/Button";
+import Button from "../../app/globals/headerSection/Button";
 
 const LatestNewsSection = ({ newsData = [] }) => {
   return (

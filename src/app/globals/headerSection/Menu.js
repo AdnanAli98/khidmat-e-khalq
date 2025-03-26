@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../headerSection/header.module.scss";
+import styles from "./header.module.scss";
 
 const Menu = () => {
   return (
