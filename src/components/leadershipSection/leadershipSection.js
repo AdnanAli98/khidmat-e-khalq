@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./leadership.module.scss";
-import Button from "../../app/globals/headerSection/Button";
+import Button from "../../globals/headerSection/Button";
 
 const LeadershipSection = ({ data = [] }) => {
   return (

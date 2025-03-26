@@ -10,8 +10,8 @@ export const metadata = {
   title: "Khidmat-e-Khalq",
 };
 
-import Header from "./globals/headerSection/Header";
-import Footer from "./globals/footerSection/Footer";
+import Header from "@/globals/headerSection/Header";
+import Footer from "@/globals/footerSection/Footer";
 
 export default function RootLayout({ children }) {
   return (

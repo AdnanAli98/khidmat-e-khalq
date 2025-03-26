@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./about.module.scss";
-import Button from "../../app/globals/headerSection/Button";
+import Button from "../../globals/headerSection/Button";
 
 const AboutSection = () => {
   return (
