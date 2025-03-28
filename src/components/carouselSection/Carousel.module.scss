@@ -1,7 +1,14 @@
 .carouselWrapper {
   text-align: center;
   padding: 60px 0;
-  
+
+  @media screen and (max-width: 1280px) {
+    padding: 20px 10px;
+  }
+
+  @media screen and (max-width: 550px) {
+    padding: 20px 10px;
+  }
 }
 
 .title {
@@ -18,42 +25,49 @@
 }
 
 .carouselContainer {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   padding: 40px 0;
 }
 
-.carousel {
-  display: flex;
-  gap: 30px;
-  cursor: grab;
-  margin-left: calc(-1 * (100vw / 10)); 
-  margin-right: calc(-1 * (100vw / 10));  
+.swiperContainer {
+  padding: 20px 0;
 }
 
 .carouselCard {
-  flex: 0 0 calc(100vw / 5.5);
   background: #f7f7f7;
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+ 
 
   &:hover {
     background: #b89a5c;
     color: #fff;
     transform: translateY(-10px);
 
-    .cardFooter h2 {
-      color: #fff;
+    .cardFooter {
+      display: flex; 
+      justify-content: space-between;
+      h2 {
+        color: #fff;
+        font-weight: 500;
+      }
     }
+
     .linkButton {
       background-color: #fff;
+
       svg {
         fill: #000;
       }
     }
   }
 }
+
+
 
 .cardImage {
   width: 100%;
@@ -67,8 +81,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  
-  .cardTitle{
+
+  .cardTitle {
     font-size: 20px;
   }
 }
@@ -104,28 +118,11 @@
 }
 
 
-@media screen and (max-width: 1500px) {
-  .carouselCard {
-    flex: 0 0 calc(100vw / 4); // Show 3 full cards, with half-cards on edges
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .carouselCard {
-    flex: 0 0 calc(100vw / 2.5); // Show 2 full cards, with half-cards on edges
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .carousel {
-    margin-left: 0; 
-    margin-right: 0; 
-  }
-  .carouselCard {
-    flex: 0 0 calc(100vw / 1.2); // Show 1 full card with some cut-off on edges
+@media screen and (max-width: 550px) {
+  .swiper-slide {
+    width: 100% !important;
   }
   .title {
     font-size: 25px;
   }
 }
-

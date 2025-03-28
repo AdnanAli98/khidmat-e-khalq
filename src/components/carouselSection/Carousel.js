@@ -1,7 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/autoplay";
 import Image from "next/image";
 import styles from "./Carousel.module.scss";
 import Button from "../../globals/headerSection/Button";
@@ -15,18 +18,6 @@ const cards = [
 ];
 
 const Carousel = () => {
-  const carouselRef = useRef(null);
-  const [width, setWidth] = useState(0);
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      setWidth(
-        carouselRef.current.scrollWidth - carouselRef.current.offsetWidth
-      );
-    }
-  }, []);
-
   return (
     <section className={styles.carouselWrapper}>
       <h2 className={styles.title}>What Khidmat e Khalq do?</h2>
@@ -35,22 +26,28 @@ const Carousel = () => {
         us in our mission to uplift and empower communities!
       </p>
       <div className={styles.carouselContainer}>
-        <motion.div
-          ref={carouselRef}
-          className={styles.carousel}
-          drag="x"
-          dragConstraints={{ left: -width, right: 0 }}
-          animate={controls}
+        <Swiper
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          slidesPerView={1}
+          spaceBetween={30}
+          breakpoints={{
+            550: { slidesPerView: 2, spaceBetween: 20 },
+            950: { slidesPerView: 3, spaceBetween: 20 },
+            1280: { slidesPerView: 4.4, spaceBetween: 30 },
+          }}
+          centeredSlides={true}
+          className={styles.swiperContainer}
         >
           {[...cards, ...cards].map((card, index) => (
-            <motion.div key={index} className={styles.carouselCard}>
+            <SwiperSlide key={index} className={styles.carouselCard}>
               <Image
                 src={card.image}
                 alt={card.name}
-                width={400} 
+                width={400}
                 height={400}
                 className={styles.cardImage}
-                priority 
+                priority
               />
               <div className={styles.cardFooter}>
                 <h2 className={styles.cardTitle}>{card.name}</h2>
@@ -69,12 +66,12 @@ const Carousel = () => {
                   </svg>
                 </button>
               </div>
-            </motion.div>
+            </SwiperSlide>
           ))}
-        </motion.div>
+        </Swiper>
       </div>
-       <Button button_text="Get Involved" button_url="www.get-involve.com" />
-      </section>
+      <Button button_text="Get Involved" button_url="www.get-involve.com" />
+    </section>
   );
 };
 
