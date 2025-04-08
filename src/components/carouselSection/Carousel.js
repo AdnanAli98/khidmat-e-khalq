@@ -7,15 +7,17 @@ import "swiper/css/free-mode";
 import "swiper/css/autoplay";
 import Image from "next/image";
 import styles from "./Carousel.module.scss";
+import Link from "next/link";
 import Button from "../../globals/headerSection/Button";
 
 const cards = [
-  { image: "/img.png", name: "Medical Camps" },
-  { image: "/ambulance.png", name: "Ambulance" },
-  { image: "/water_project.png", name: "Water Project" },
-  { image: "/rescue.png", name: "Rescue Volunteer" },
-  { image: "/img.png", name: "Schools" },
+  { image: "/img.png", name: "Medical Camps", link: "/medical-camps" },
+  { image: "/ambulance.png", name: "Ambulance", link: "/ambulance" },
+  { image: "/water_project.png", name: "Water Project", link: "/water-project" },
+  { image: "/rescue.png", name: "Rescue Volunteer", link: "/rescue" },
+  { image: "/img.png", name: "Schools", link: "/schools" },
 ];
+
 
 const Carousel = () => {
   return (
@@ -41,6 +43,7 @@ const Carousel = () => {
         >
           {[...cards, ...cards].map((card, index) => (
             <SwiperSlide key={index} className={styles.carouselCard}>
+            <Link href={card.link} className={styles.cardLink}>
               <Image
                 src={card.image}
                 alt={card.name}
@@ -51,7 +54,7 @@ const Carousel = () => {
               />
               <div className={styles.cardFooter}>
                 <h2 className={styles.cardTitle}>{card.name}</h2>
-                <button className={styles.linkButton}>
+                <button className={styles.linkButton} aria-label="Go to program">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="14"
@@ -66,7 +69,8 @@ const Carousel = () => {
                   </svg>
                 </button>
               </div>
-            </SwiperSlide>
+            </Link>
+          </SwiperSlide>          
           ))}
         </Swiper>
       </div>

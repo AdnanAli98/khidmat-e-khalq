@@ -15,13 +15,24 @@ const ProgramSection = ({ programs = [] }) => {
         <div className={styles.programGrid}>
           {programs.map((program, index) => (
             <div key={index} className={styles.programItem}>
-              <div className={styles.imageWrapper}>
-                <img src={program.img} alt={program.heading} className={styles.image} />
-              </div>
+              <Link href={program.link} className={styles.imageLink}>
+                <div className={styles.imageWrapper}>
+                  <img
+                    src={program.img}
+                    alt={program.heading}
+                    className={styles.image}
+                  />
+                </div>
+              </Link>
+
               <div className={styles.programContent}>
-                <h3 className={styles.programTitle}>{program.heading}</h3>
+                <Link href={program.link} className={styles.titleLink}>
+                  <h3 className={styles.programTitle}>{program.heading}</h3>
+                </Link>
                 <p className={styles.programDescription}>{program.description}</p>
-                <Link href={program.link} className={styles.programLink}>Learn More</Link>
+                <Link href={program.link} className={styles.programLink}>
+                  Learn More
+                </Link>
               </div>
             </div>
           ))}

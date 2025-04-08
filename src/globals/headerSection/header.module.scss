@@ -29,12 +29,20 @@
     gap: 35px;
     list-style: none;
     font-weight: 500;
-    font-size: 18px;
+
+    @media (max-width: 1260px) {
+      gap: 30px;
+}
   }
 
   .menu li {
     cursor: pointer;
     color: #000;
+    font-size: 18px;
+
+    @media (max-width: 1260px) {
+          font-size: 15px;
+    }
   }
 
   .hamburger {
@@ -46,8 +54,8 @@
   .desktopButton {
     display: block;
   }
-
-  @media (max-width: 1250px) {
+  
+  @media (max-width: 1100px) {
     .container {
       height: 70px;
     }

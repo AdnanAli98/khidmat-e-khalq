@@ -9,22 +9,17 @@ import { sliderData } from "./sliderData";
 import { useState } from "react";
 
 const BannerSlider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex);
-  }
   return (
     <div className={styles.sliderContainer}>
       <Swiper
         modules={[Pagination, Autoplay]}
-        onSlideChange={(swiper) => handleSlideChange(swiper)}
         pagination={{
           clickable: true,
           renderBullet: (index, className) => {
-            return `<span class="${className} ${index === activeIndex ? `${styles.swiperPaginationBulletActive}` : `${styles.swiperPaginationBullet}`}">
-                    </span>`;
-          }
+            return (
+              `<span class="${className} ${styles.swiperPaginationBullet}" data-index="${index}"></span>`
+            );
+          },
         }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         slidesPerView={1}

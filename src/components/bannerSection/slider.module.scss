@@ -5,7 +5,7 @@
   overflow: hidden;
 
   @media (max-width: 1120px) {
-    height: 620px;
+    height: 580px;
   }
 }
 
@@ -16,7 +16,7 @@
 }
 
 
-.swiperPaginationBullet {
+span.swiperPaginationBullet {
   width: 12px;
   height: 12px;
   background-color: transparent;
@@ -26,21 +26,24 @@
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 999;
+  opacity: 1;
 
   &:hover {
     background-color: white;
   }
-  &.swiper-pagination-bullet-active {
-    background-color: white !important;
-  }
 }
 
-.swiperPaginationBulletActive {
-  background-color: white !important;
-  width: 12px;
-  height: 12px;
-  border: 1px solid white;
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+  border-color: white;
 }
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 
 .swiper-slide {
   width: 100%;
@@ -108,9 +111,16 @@
   margin-bottom: 1rem;
   max-width: 500px;
 
-  @media (max-width: 620px) {
-    font-size: 33px;
+  @media screen and (max-width: 1300px) {
+    font-size: 32px;
+    margin-bottom: 0.3rem;
   }
+  @media screen and (max-width: 1025px) {
+    font-size: 27px;
+    margin-bottom: 0.3rem;
+
+  }
+
 }
 
 .description {

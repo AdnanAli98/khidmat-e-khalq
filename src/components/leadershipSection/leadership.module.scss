@@ -13,8 +13,12 @@
     font-weight: bold;
     margin-bottom: 10px;
 
-    @media screen and (max-width: 620px) {
-      font-size: 25px;
+    @media screen and (max-width: 1300px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 1025px) {
+      font-size: 27px;
+  
     }
   }
 

@@ -1,98 +1,114 @@
 .latestNewsSection {
-    padding: 60px 10px;
-    text-align: center;
-    background-color: #f9f9f9;
+  padding: 60px 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .buttonWrapper {
+    margin-top: 40px;
+  }
+
+  .heading {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+    @media screen and (max-width: 1300px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 1025px) {
+      font-size: 27px;
   
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+    color: #454545;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 28px;
+  }
+
+  .newsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .newsCard {
+    display: block; // Make anchor behave like a block card
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0.65px 1.94px 0.49px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-5px);
     }
 
-    .buttonWrapper {
-        margin-top: 40px;
+    .image {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px 16px 0 0;
     }
-  
-    .heading {
-      font-size: 44px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-  
-    .description {
-      font-size: 18px;
-      color: #454545;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 28px;
-    }
-  
-    .newsGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      justify-content: center;
-    }
-  
-    .newsCard {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 0.65px 1.94px 0.49px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease-in-out;
-  
-      &:hover {
-        transform: translateY(-5px);
+
+    .content {
+      padding: 20px;
+      text-align: left;
+
+      .category {
+        font-size: 14px;
+        font-weight: bold;
+        color: #38473f;
+        text-transform: uppercase;
       }
-  
-      .image {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 16px 16px 0 0;
+
+      .title {
+        font-size: 19px;
+        font-weight: bold;
+        color: #1e1e1e;
+        margin: 10px 0;
       }
-  
-      .content {
-        padding: 20px;
-        text-align: left;
-  
-        .category {
-          font-size: 14px;
-          font-weight: bold;
-          color: #38473F;
-          text-transform: uppercase;
+
+      .link {
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .linkWrapper {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      
+
+      .linkButton {
+        background: #00a859;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 50%;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+          background: #008f4f;
         }
-  
-        .title {
-          font-size: 19px;
-          font-weight: bold;
-          color: #1E1E1E;
-          margin: 10px 0;
-        }
-  
-        .link {
-          display: inline-block;
-          margin-top: 10px;
-        }
-  
-        .linkButton {
-          background: #00a859;
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 15px;
-          border-radius: 50%;
-          transition: background 0.3s ease-in-out;
-  
-          &:hover {
-            background: #008f4f;
-          }
-  
-          svg {
-            fill: white;
-          }
+
+        svg {
+          fill: white;
         }
       }
     }
   }
-  
+}
