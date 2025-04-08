@@ -5,14 +5,14 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import Button from "./Button";
 import styles from "./header.module.scss";
-import { FiMenu, FiX } from "react-icons/fi"; 
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
-    console.log ('test',isOpen);
+    console.log("test", isOpen);
   };
 
   return (
@@ -24,7 +24,10 @@ const Header = () => {
           <Menu />
         </div>
         <div className={styles.desktopButton}>
-          <Button button_text="Join the cause" button_url="www.join-the-cause.com" />
+          <Button
+            button_text="Join the cause"
+            button_url="www.join-the-cause.com"
+          />
         </div>
 
         <div className={styles.hamburger} onClick={toggleDrawer}>
@@ -33,13 +36,21 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <div className={`${styles.drawer} ${isOpen ? styles.open : ""}`}>
-          <div className={styles.closeIcon} onClick={toggleDrawer}>
-            <FiX size={24} />
-          </div>
+        <div className={styles.backdrop} onClick={toggleDrawer}>
+          <div
+            className={`${styles.drawer} ${isOpen ? styles.open : ""}`}
+            onClick={(e) => e.stopPropagation()} 
+          >
+            <div className={styles.closeIcon} onClick={toggleDrawer}>
+              <FiX size={24} />
+            </div>
 
-          <Menu />
-          <Button button_text="Join the cause" button_url="www.join-the-cause.com" />
+            <Menu />
+            <Button
+              button_text="Join the cause"
+              button_url="www.join-the-cause.com"
+            />
+          </div>
         </div>
       )}
     </nav>

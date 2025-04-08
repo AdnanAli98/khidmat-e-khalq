@@ -10,8 +10,8 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <div className={styles.footerColumn}>
-            <Logo />
-            <h4>Khidmat e Khalq</h4>
+          <Logo className={styles.footerLogo} />
+            <h4 className={styles.logoHeading}>Khidmat e Khalq</h4>
             <p>Your involvement helps us deliver hope and support to individuals facing challenges every day.</p>
             <ul className={styles.socialIcons}>
               <li>

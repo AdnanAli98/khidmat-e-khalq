@@ -25,14 +25,18 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 999;
 
   &:hover {
     background-color: white;
   }
+  .swiper-pagination-bullet-active {
+    background-color: white !important;
+  }
 }
 
 .swiperPaginationBulletActive {
-  background-color: white;
+  background-color: white !important;
   width: 12px;
   height: 12px;
   border: 1px solid white;
@@ -102,6 +106,7 @@
   font-size: 44px;
   font-weight: bold;
   margin-bottom: 1rem;
+  max-width: 500px;
 
   @media (max-width: 620px) {
     font-size: 33px;
@@ -112,6 +117,7 @@
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 2rem;
+  max-width: 500px;
 }
 
 .buttons {
@@ -120,6 +126,7 @@
 
   @media (max-width: 1120px) {
     flex-direction: column;
+    max-width: 200px;
   }
 
   .button {

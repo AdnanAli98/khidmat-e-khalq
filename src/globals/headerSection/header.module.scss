@@ -1,12 +1,18 @@
-$primary-color: #00a859;
-$black: #333;
-$white: #fff;
 
 .header {
   width: 100%;
-  background: $white;
+  background: #fff;
   padding: 15px 0;
   font-family: "Plus Jakarta Sans", sans-serif;
+
+  .logoImage {
+    width: 90px;
+
+    @media (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 
   .container {
     max-width: 1544px;
@@ -28,6 +34,7 @@ $white: #fff;
 
   .menu li {
     cursor: pointer;
+    color: #000;
   }
 
   .hamburger {
@@ -56,14 +63,13 @@ $white: #fff;
   }
 }
 
-/* Fix Mobile Drawer */
 .drawer {
   position: fixed;
   top: 0;
   left: 0;
   width: 80%;
   height: 100vh;
-  background: $white;
+  background: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateX(-100%);
@@ -87,7 +93,7 @@ $white: #fff;
   right: 15px;
   cursor: pointer;
   font-size: 28px;
-  color: $black;
+  color: #000;
   z-index: 1100;
 }
 
@@ -106,4 +112,14 @@ $white: #fff;
   display: block;
   margin-top: 20px;
   padding-left: 20px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999; 
+  background: rgba(0, 0, 0, 0.1); 
 }
